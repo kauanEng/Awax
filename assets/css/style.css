@@ -1,0 +1,755 @@
+* {
+    margin: 0;
+    padding: 0;             /*SEMPRE ATIVAR - EM QUALQUER PROJETO WEB */
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    overflow-x: hidden; /* todos os excessos na horizontal é ignorado */
+}
+
+/* HEADER - TODA A CONFIGURAÇÃO DO MENU -----------------------------------------------------*/
+
+header {
+    height: 100px;  /*altura do menu conforme o protótipo */
+    background-color: black; /*cor do menu */
+    color: white;
+}
+
+.header {
+    max-width: 1200px; /*Largura máxima da página, conforme o prototipo */ 
+    height: 100px;
+    background-color:black;
+    margin: auto;  /* faz a cor preta ir ao meio */
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.menu-open {
+    display: none;
+}
+
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+
+.logoimg {
+    width: 80px;
+    height: 80px;
+    background-color: #B28756;
+    border-radius: 50%;
+}
+
+.menu ul,
+.menu li {
+   list-style: none;  /*tira os pontos padrão da table ordenada */
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid black;
+}
+
+.menu li a:hover,
+.menu .active a {
+    border-bottom: 5px solid #B28756;
+    color: #CCC;
+}
+
+/*BANNER - TODA A CONFIGURAÇÃO --------------------------------------------------------- */
+
+
+.banner {
+    height:calc(100vh - 100px);  /*100vh - 100px do header(menu)- background fica responsivo p qualquer tela */
+    background-color: #CCC;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+
+}
+
+.banner .sliders {
+    width:1000vw;
+    height: 100%;
+}
+
+.banner .slide {
+    width: 100vw;  /*VW view Widht , VH view heght */
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.banner .slidearea {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    color: white;
+    justify-content: center;
+}
+
+.banner h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.banner h1 span {
+    color: #B28756;
+}
+
+.banner h2 {
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.banner a {
+    display: block;
+    background-color: #B28756;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    text-decoration: none;
+    padding:10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+
+}
+
+.banner .sliders-pointers {
+    width: 100vw;
+    height: 20px;
+    position: absolute; /*independente da area ele aparece */
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #B28756;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor:pointer;
+}
+
+.banner .pointer.active {
+    background-color: #B28756;
+}
+
+.padrao {  /*container geral */
+   
+    padding-top: 50px;  /*para cima faz parte do elemento*/
+    padding-bottom: 50px; /* para baixo */
+    background-color: #F7F7F7;
+
+}
+
+.padrao .secao-titulo, 
+.padrao .secao-desc {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.padrao .secao-titulo {
+   font-size: 20px;
+   color: black;
+  
+}
+
+.padrao .secao-desc {
+    font-size: 12px;
+    color:#CCC;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.padrao .secao-body {
+    max-width: 1140px;
+    margin: auto;
+   
+}
+
+.padrao .light {
+    background-color: #F7F7F7;
+    color: black;
+}
+
+.padrao.light .secao-titulo,
+.padaro.light .section-body {
+    color:black;
+}
+
+.padrao.dark {
+    background-color: black;
+    color: white;
+}
+
+.padrao.dark .section-titulo,
+.padrao-dark  .section-body {
+    color: white;
+}
+
+
+.button {
+    display:inline-block;
+    background-color: #B28756;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    text-decoration: none;
+    padding:10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+
+/* CSS DE ÁREAS ESPECÍFICAS */
+
+.secao-sobrenos {
+    display: flex;
+
+}
+.secao-sobrenos-esquerda {
+    flex: 1;
+}
+
+.secao-sobrenos-direita {
+    width: 520px;
+    text-align: center;
+}
+
+.secao-sobrenos-direita img {
+    width: 480px;
+    box-shadow: 0px 5px 10px;
+}
+
+.secao-sobrenos-esquerda p {
+    font-size: 14px;
+    line-height: 25px;
+
+}
+
+.secao-servicos {
+    display: flex;
+}
+
+.secao-servico {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding:15px;
+}
+
+.secao-servico:first-child {
+    border-left: 1px solid #333;
+}
+
+.secao-servicos h4 {
+margin-top: 20px;
+text-transform: uppercase;
+font-size: 18px;
+
+}
+
+.secao-servico p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999;
+}
+
+.secao-projetos {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.secao-projetos-filtros {
+    border:1px solid #CCC;
+    background-color: #EEE;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.secao-projetos-filtros ul 
+.secao-projetos-filtros li {
+    list-style: none;
+    
+}
+
+.secao-projetos-filtros li  {
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-left:1px solid #CCC;
+    color: #555;
+    border-bottom: 3px solid #EEE;
+    cursor: pointer;
+}
+.secao-projetos-filtros li:hover,
+.secao-projetos-filtros li.active {
+    border-bottom: 3px solid #B28756 ;
+} 
+
+.secao-projetos-filtros li:first-child {
+    border-left: 0px;
+}
+
+
+.secao-projetos-fotos {
+    width: 100vw;  /*usa tudo -  até 1140px*/
+    max-width: 1140;   
+     margin-top: 20px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+}
+
+.secao-projetos-foto {
+    width: 280px;
+}
+
+.secao-projetos-fotoarea {
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+.secao-projetos-fotoarea img {
+    width: inherit;
+    height: inherit;
+}
+
+.secao-projetos-fotoinf {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+/* EFEITO QUE QUANDO PASSA O MOUSE ELE APARECE */
+
+}
+.secao-projetos-fotoinf h5 { 
+font-size: 18px;
+font-weight: 600;
+}
+
+.secao-projetos-fotoarea:hover .secao-projetos-fotoinf  {
+    display: flex;
+}
+
+.bg-time {
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+
+.secao-time-area {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.secao-time {
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;
+}
+
+
+.secao-time .sliders {
+    width:1000vw;
+    height: 100%;
+}
+
+.secao-time .slide {
+    width: 280px;  /*VW view Widht , VH view heght */
+    height: 100%;
+    min-height: 300px;
+    display: inline-block;
+    background-color: white;
+    margin-right:20px;
+}
+
+.secao-time .slidearea {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    color: black;
+    justify-content: center;
+    padding: 30px;
+}
+
+.secao-time-avatar {
+width: 150px;
+height: auto;
+}
+
+.secao-time-nome {
+text-transform: uppercase;
+font-weight: 600;
+font-size: 17px;
+margin-top: 30px;
+
+}
+
+.secao-time-funcao {
+    font-size: 14px;
+    color: #999;
+    margin-top:5px;
+}
+
+.secao-time-social {
+    display: flex;
+    margin-top: 20px;
+
+}
+
+.secao-time-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: #CCC;
+    border-radius: 13px;
+    margin-right:10px;
+}
+
+.secao-time-social a:hover {
+    background-color: #B28756;
+}
+
+
+.secao-time-area .sliders-pointers {
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secao-time-area .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #B28756;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor:pointer;
+}
+
+.secao-time-area .pointer.active {
+    background-color: #B28756;
+}
+
+#kauan {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.secao-mapa {
+    background-image: url(../images/mapa.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.secao-mapa-area {
+    width: 100vw;
+    max-width: 1140px;
+    display: flex;
+    margin: auto;
+
+}
+
+.secao-mapa-info {
+    width: 50%;
+    padding: 30px;
+    background-color: #FFF;
+    color: black;
+
+}
+
+.secao-mapa-info-item{
+    display: flex;
+    align-items: center;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.secao-mapa-info-item-img {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+    background-color: #999999;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+.secao-mapa-info-item-img img {
+    width: 15px;
+    height: auto;
+}
+
+
+
+@media (min-width:455px) and (max-width:800px) {
+    
+    .logo {
+        margin-left: 30px;
+    }
+
+    
+    .menu-open {
+        display: block;
+        width: 45px;
+        margin-right: 50px;
+    }
+    
+
+    nav {
+        display: none;
+        position: absolute;
+        z-index: 990;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li a {
+        font-weight: bold;
+        height: 80px;
+        font-size:27px;
+        margin-left: 50px;
+        border: 0;
+    }
+
+    .menu li.active a {
+        border: 0;
+        color: #B28756;
+    }
+
+    .secao-sobrenos {
+        flex-direction: column;
+    }
+
+    .secao-sobrenos-esquerda {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    .secao-sobrenos-direita{
+        width: auto;
+    }
+    .secao-servicos {
+        flex-wrap: wrap;
+}
+    .secao-servico {
+        min-width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .secao-servico:first-child {
+        border: 0;
+    }
+
+    .secao-time {
+        max-width: 580px;
+    }
+
+    .secao-mapa{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .secao-mapa-area {
+        width: auto;
+    }
+
+    .secao-mapa-info {
+        width: auto;
+        
+    }
+
+    .secao-mapa-info-item {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* mobile */
+
+@media (max-width:454px) {
+    
+    .logo {
+        margin-left: 30px;
+    }
+
+    
+    .menu-open {
+        display: block;
+        width: 45px;
+        margin-right: 50px;
+    }
+    
+
+    nav {
+        display: none;
+        position: absolute;
+        z-index: 990;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 80vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li a {
+        font-weight: bold;
+        height: 60px;
+        font-size:20px;
+        margin-left: 30px;
+        border: 0;
+    }
+
+    .menu li.active a {
+        border: 0;
+        color: #B28756;
+    }
+
+    .banner h1 {
+        font-size: 20px;
+    }
+    .banner h2 {
+        font-size: 17px;
+    }
+
+    .secao-sobrenos {
+        flex-direction: column;
+    }
+
+    .secao-sobrenos-esquerda {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    .secao-sobrenos-direita{
+        width: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .secao-servicos {
+        flex-wrap: wrap;
+    }
+
+    .secao-sobrenos-direita img {
+        width: 100%;
+    }
+
+
+    .secao-servico {
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .secao-servico:first-child {
+        border: 0;
+    }
+
+    .secao-time {
+        max-width: 280px;
+    }
+
+    .secao-mapa{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .secao-mapa-area {
+        width: auto;
+    }
+
+    .secao-mapa-info {
+        width: auto;
+        
+    }
+
+    .secao-mapa-info-item {
+        margin-bottom: 20px;
+    }
+
+    .secao-projetos-filtros {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .secao-projetos-fotos {
+        width: 320px;
+        margin-right: 40px;
+    }
+
+    .secao-projetos-fotoarea {
+        width: 300px;
+        height: 200px;
+        margin-right: 80px;
+    }
+}
