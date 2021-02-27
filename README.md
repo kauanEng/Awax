@@ -1,3 +1,6 @@
-<h1>UM PROJETO FEITO SÓ COM HTML5 E CSS COM PROPRIEDADES IMPORTANTES, SELETORES COMPLEXOS</h1>
+<h1 align="center">
+    <a href="https://pt-br.reactjs.org/">🔗 React</a>
+</h1>
+<p align="center">🚀 Tecnólogias utilizadas para construir o template</p>
 
-# APRENDI DEMAIS MESMO COM ESSE PROJETO!
+<h1>HTML5 / CSS flex-box</h1>
