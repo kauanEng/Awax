@@ -1,6 +1,5 @@
-<h1 align="center">
-    <a href="">🔗 TECNOLOGIAS UTILIZADAS</a>
-</h1>
+
 <p align="center">🚀 Tecnólogias utilizadas para construir o template</p>
 
-<h1>HTML5 / CSS flex-box</h1>
+
+AWAX website, a template created by me to study and learn even more about HTML5 and CSS3.
